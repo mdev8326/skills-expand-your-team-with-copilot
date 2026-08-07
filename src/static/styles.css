@@ -30,6 +30,10 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+
+  /* Activity tag */
+  --activity-tag-bg: #e8eaf6;
+  --activity-tag-color: #3949ab;
 }
 
 /* Dark mode color overrides */
@@ -45,6 +49,8 @@ body.dark-mode {
   --warning-light: #3a2e00;
   --error-light: #3a0e0e;
   --info-light: #0a2530;
+  --activity-tag-bg: #2a2d5e;
+  --activity-tag-color: #9fa8da;
 }
 
 * {
@@ -210,19 +216,14 @@ section h3 {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: #e8eaf6;
-  color: #3949ab;
+  background: var(--activity-tag-bg);
+  color: var(--activity-tag-color);
   font-size: 0.65rem;
   font-weight: bold;
   padding: 2px 6px;
   border-radius: 10px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-}
-
-body.dark-mode .activity-tag {
-  background: #2a2d5e;
-  color: #9fa8da;
 }
 
 /* Dark mode toggle button */
