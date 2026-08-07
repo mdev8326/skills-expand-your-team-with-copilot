@@ -866,6 +866,18 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeRangeFilter,
   };
 
+  // Dark mode toggle
+  const darkToggle = document.getElementById("dark-mode-toggle");
+  if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+    darkToggle.textContent = "☀️";
+  }
+  darkToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    darkToggle.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("darkMode", isDark);
+  });
+
   // Initialize app
   checkAuthentication();
   initializeFilters();
