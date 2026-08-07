@@ -573,7 +573,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `
         }
-        <button class="share-button" data-activity="${name}" data-description="${details.description}" title="Share this activity">
+        <button class="share-button" title="Share this activity">
           📤 Share
         </button>
       </div>
